@@ -20,6 +20,6 @@ describe 'Jsonplaceholder comments' do
 	it 'should return all comments for a given post' do
 		expected_data = JSON.parse(IO.read('requests/post1_comments.json'))
 		result_post1_comments = RestClient.get('http://jsonplaceholder.typicode.com/posts/1/comments')
-		expect(ersult_post1_comments).to match_json_expression(expected_data)
+		expect(result_post1_comments).to match_json_expression(expected_data)
 	end
 end
